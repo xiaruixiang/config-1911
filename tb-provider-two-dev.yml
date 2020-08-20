@@ -4,3 +4,19 @@ spring:
       url: jdbc:mysql://localhost:3306/1911?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
       username: root
       password: root
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud: 
+    bus:
+      enabled: true
+      trace: 
+        enabled: true
+        
+management:
+  endpoints: 
+    web: 
+      exposure: 
+        include: "*"
